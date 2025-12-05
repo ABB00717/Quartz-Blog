@@ -1,6 +1,10 @@
 ---
 title: Welcome to Quartz
 ---
+嗨！這裡是 ABB00717。
 
-This is a blank Quartz installation.
-See the [documentation](https://quartz.jzhao.xyz) for how to get started.
+目前來說，我這個人
+- 各方面來說都很宅
+- 很喜歡和電腦打交道
+
+這裡就單純紀錄我個人的所見所聞，你看到任何東西都不要意外。
