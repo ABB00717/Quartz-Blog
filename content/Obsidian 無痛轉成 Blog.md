@@ -35,3 +35,8 @@ tags:
 > 4. [Build and preview](https://quartz.jzhao.xyz/build) Quartz
 > 5. Sync your changes with [GitHub](https://quartz.jzhao.xyz/setting-up-your-GitHub-repository)
 > 6. [Host](https://quartz.jzhao.xyz/hosting) Quartz online
+
+# 常用指令
+```shell
+npx quartz sync # Push changes to remote repo
+```
