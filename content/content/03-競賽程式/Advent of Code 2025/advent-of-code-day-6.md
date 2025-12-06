@@ -6,6 +6,7 @@ tags:
   - competitive-programming
 date: 2025-12-06
 ---
+
 # Part 1 
 挺單純的，大致流程如下：
 

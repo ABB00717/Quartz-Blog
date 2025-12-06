@@ -2,6 +2,7 @@
 title: ABB00717 Blog
 publish: true
 ---
+
 嗨！這裡是 ABB00717。
 
 目前來說，我這個人

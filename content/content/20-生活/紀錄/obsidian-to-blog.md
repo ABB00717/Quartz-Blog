@@ -6,6 +6,7 @@ tags:
   - blog
 date: 2025-12-06
 ---
+
 原本我都是用 Jekyll，但有的格式和 Obsidian 無法相容（連最基礎的 KaTeX 都沒辦法！），所以只好找新的方案。很幸運找到這個叫做 [Quartz](https://quartz.jzhao.xyz/) 的開源專案可以完全支援 Obsidian 的 Markdown 風格！
 
 > 這專案還是由 Obsidian 官方贊助的， 盡管他們自己有功能的官方付費方案 。
