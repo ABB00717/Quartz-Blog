@@ -1,6 +1,6 @@
 ---
 title: Advent of Code Day 6
-draft: false
+publish: true
 tags:
   - advent-of-code
   - competitive-programming

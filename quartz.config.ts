@@ -16,7 +16,7 @@ const config: QuartzConfig = {
       provider: "google", tagId: ""
     },
     locale: "en-US",
-    baseUrl: "quartz.jzhao.xyz",
+    baseUrl: "abb00717.com",
     ignorePatterns: ["private", "templates", ".obsidian"],
     defaultDateType: "modified",
     theme: {

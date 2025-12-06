@@ -28,9 +28,5 @@ date: 2025-06-12
 
 搜尋除了 `node_modules` 資料夾以外的所有檔案，並印出檔案內有 "Welcome to Quartz" 的檔案名稱。
 ```shell
-$ find ./ -path "*/node_modules/*" -prune -o -type f -exec grep -H "Welcome to Quartz" {} \;
-./docs/index.md:title: Welcome to Quartz 4
-./content/02-程式開發/指令工具/find.md:搜尋除了 `node_modules` 資料夾以外的所有檔案，並印出檔案內有 "Welcome to Quartz" 的檔案名稱。
-./content/02-程式開發/指令工具/find.md:find ./ -path "*/node_modules/*" -prune -o -type f -exec grep -H "Welcome to Quartz" {} \;
-# ...
+find ./ -path "*/node_modules/*" -prune -o -type f -exec grep -H "Welcome to Quartz" {} \;
 ```
