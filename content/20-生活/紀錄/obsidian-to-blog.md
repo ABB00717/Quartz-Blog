@@ -46,3 +46,7 @@ npx quartz sync # Push changes to remote repo
 作者也有為 Obsidian 做[專屬外掛](https://github.com/saberzero1/quartz-syncer)，可以單純在 Obsidian 內做一切需要的操作。
 
 [外掛文檔](https://saberzero1.github.io/quartz-syncer-docs/)
+
+---
+# 參考資料
+1. https://www.youtube.com/watch?v=6s6DT1yN4dw
