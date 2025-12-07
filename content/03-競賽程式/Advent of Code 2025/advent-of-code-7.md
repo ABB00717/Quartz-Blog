@@ -1,6 +1,6 @@
 ---
 title: Advent of Code Day 7
-draft: true
+draft: false
 tags:
   - competitive-programming
   - advent-of-code
