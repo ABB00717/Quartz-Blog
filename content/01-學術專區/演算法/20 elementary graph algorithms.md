@@ -1,6 +1,6 @@
 ---
 title: 20 Elementary Graph Algorithms
-publish: true
+draft: true
 tags:
   - algorithm
   - graph-algorithm
