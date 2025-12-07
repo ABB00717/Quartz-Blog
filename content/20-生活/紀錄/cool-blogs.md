@@ -13,6 +13,11 @@ date: 2025-12-07
 - [閱讀的目的從來不是獲取知識](https://www.geedea.pro/essays/%E9%98%85%E8%AF%BB%E7%9A%84%E7%9B%AE%E7%9A%84%E4%BB%8E%E6%9D%A5%E4%B8%8D%E6%98%AF%E8%8E%B7%E5%8F%96%E7%9F%A5%E8%AF%86/)
 - [閱讀應當是一種體驗](https://www.geedea.pro/essays/reading-as-an-experience/)
 
+# [TSMR](https://tsmr.eu/)
+- [Internet of Vulnerable Things](https://raw.githubusercontent.com/otsmr/internet-of-vulnerable-things/main/Internet_of_Vulnerable_Things.pdf)
+  > 這是 PDF 檔案
+- [Blackbox-Fuzzing of IoT Devices Using the Router TL-WR902AC as Example](https://tsmr.eu/blackbox-fuzzing.html)
+
 # [Ben Hoyt](https://benhoyt.com/)
 - [How to implement a Hash Table](https://benhoyt.com/writings/hash-table-in-c/)
 
