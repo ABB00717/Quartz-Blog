@@ -17,7 +17,7 @@ date: 2025-12-06
 把每個 column 的最終值加起來
 ```
 
-程式碼
+寫成程式碼就是
 
 ```cpp
 #include <cctype>
@@ -89,7 +89,7 @@ for ch : 從右到左一個一個字元讀取
 		result = 針對不同運算子操作，算出最終值
 ```
 
-程式碼
+寫成程式碼就是
 
 ```cpp
 #include <cctype>
