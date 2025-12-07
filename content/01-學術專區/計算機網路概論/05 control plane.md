@@ -1,6 +1,6 @@
 ---
 title: 05 Control Plane
-publish: true
+draft: false
 tags:
   - computer-networks
 date: 2025-12-06

@@ -1,6 +1,6 @@
 ---
 title: Example Title
-publish: false
+draft: false
 tags:
   - example-tag
 date:

@@ -1,6 +1,6 @@
 ---
 title: 10 Virtual Memory
-publish: false
+draft: true
 tags:
   - operating-system
 date: 2025-12-06
