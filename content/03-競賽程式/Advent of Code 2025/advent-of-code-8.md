@@ -2,8 +2,8 @@
 title: Advent of Code Day 8
 draft: false
 tags:
-  - competitive-programming
   - advent-of-code
+  - CP
 date: 2025-12-08
 ---
 

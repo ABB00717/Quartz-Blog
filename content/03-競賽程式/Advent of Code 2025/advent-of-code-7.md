@@ -2,9 +2,9 @@
 title: Advent of Code Day 7
 draft: false
 tags:
-  - competitive-programming
   - advent-of-code
-date: 2025-07-12
+  - CP
+date: 2025-12-07
 ---
 # Part 1
 
