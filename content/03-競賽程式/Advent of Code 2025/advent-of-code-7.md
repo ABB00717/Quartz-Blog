@@ -36,13 +36,13 @@ int main() {
     // for (each row start from row2)
     for (int row = 1; row < fields.size(); row++) {
         for (int col = 0; col < fields[0].size(); col++) {
-	        // if (up block is '|')
+            // if (up block is '|')
             if (fields[row - 1][col] == '|') {
                 if (fields[row][col] != '^') {
                     fields[row][col] = '|';
                 } else {
-					// turn the left and right block to '|' if that
-					// block is '.'
+                    // turn the left and right block to '|' if that
+                    // block is '.'
                     result++;
                     if (col != 0 && fields[row][col-1] != '^')
                         fields[row][col-1] = '|';
@@ -60,14 +60,14 @@ int main() {
 # Part 2
 就是現在這個分裂器（splitter），也就是這個光束產生的「光束宇宙」數量，是左右兩邊光束打下去後的光束宇宙數量加總。
 
-```
+```txt
 int helper(index, row, fields: (from {i} to end)) {
     if (fields is NULL) {
         return 1;
     }
 
-	if (under the index the block is '^')
-		// helper to left
+    if (under the index the block is '^')
+        // helper to left
         sum += helper(index-1, row + 1, fields(from row+2 to end)) 
         // helper to right
         sum += helper(index+1, row + 1, fields(from row+2 to end)) 
@@ -151,6 +151,3 @@ int main() {
 ## 今天我學到的新東西
 - [std::span](https://en.cppreference.com/w/cpp/container/span.html)
 - [Why can't I compile an unordered_map with a pair as key?](https://stackoverflow.com/questions/32685540/why-cant-i-compile-an-unordered-map-with-a-pair-as-key)
-
----
-總用時：1hr, 30min
