@@ -12,29 +12,29 @@ date: 2025-12-10
 
 死結檢測演算法依據資源類型的實例數量（Single vs. Multiple Instances）而有不同的實作方式。
 
-## 1. 單一實例資源 (Single Instance of Each Resource Type)
+## 單一實例資源 (Single Instance of Each Resource Type)
 
 若系統中每種資源類型只有一個實例，死結檢測可透過**等待圖 (Wait-for Graph)** 進行 。
 
 ![[image-13.png]]
 
-### 1.1 等待圖結構
+### 等待圖結構
 等待圖是資源分配圖（Resource-Allocation Graph）的變形：
 * **節點**：僅包含行程（Processes），移除了資源節點。
 * **邊**：$P_i \rightarrow P_j$ 表示行程 $P_i$ 正在等待 $P_j$ 所持有的資源 。
 
-### 1.2 檢測邏輯
+### 檢測邏輯
 * 系統需週期性地執行演算法，在等待圖中搜尋是否存在**循環 (Cycle)**。
 * 若圖中存在循環，則代表系統已發生死結 。
 * **複雜度**：若圖中有 $n$ 個頂點，檢測循環的演算法複雜度約為 $O(n^2)$ 。
 
 
 
-## 2. 多重實例資源 (Multiple Instances of a Resource Type)
+## 多重實例資源 (Multiple Instances of a Resource Type)
 
 當資源類型擁有多個實例時，等待圖無法有效運作，需改用類似銀行家演算法的檢測演算法 。
 
-### 2.1 資料結構
+### 資料結構
 設系統中有 $n$ 個行程與 $m$ 種資源類型：
 * **Available**：長度為 $m$ 的向量，表示目前各資源類型的可用數量 。
 * **Allocation**：$n \times m$ 矩陣，表示各行程目前已持有的資源數量 。
@@ -43,7 +43,7 @@ date: 2025-12-10
 > [!warning] 與銀行演算法的差異
 > 與銀行家演算法不同，這裡使用的是 `Request`（當前確定的請求）而非 `Need`（未來最大潛在需求 Max - Alloc）。
 
-### 2.2 檢測演算法 (The Algorithm)
+### 檢測演算法 (The Algorithm)
 
 此演算法用於判斷當前系統狀態下的行程是否處於死結。
 
@@ -73,7 +73,7 @@ date: 2025-12-10
     * 若存在某個索引 $i$ 使得 `Finish[i] == false`，則系統處於死結狀態。
     * 所有 `Finish[i] == false` 的行程 $P_i$ 即為死結行程。
 
-### 2.3 實例推演
+### 實例推演
 
 考慮系統狀態 ($T_0$)，有 5 個行程 ($P_0 \sim P_4$) 與 3 種資源 (A, B, C) ：
 
@@ -102,7 +102,7 @@ date: 2025-12-10
 
 > **死結案例**：若 $P_2$ 多請求一個 C，即 `Request_2 = (0,0,1)`，則推演至 $P_0$ 完成後 `Work=(0,1,0)`，無任何行程請求可被滿足，系統陷入死結（涉及 $P_1, P_2, P_3, P_4$）。
 
-## 3. 檢測時機 (Detection-Algorithm Usage)
+## 檢測時機 (Detection-Algorithm Usage)
 
 檢測演算法的執行頻率取決於兩個因素 ：
 1.  **死結發生的頻率**：若死結經常發生，應頻繁檢測。

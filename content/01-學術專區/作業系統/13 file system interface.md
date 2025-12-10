@@ -1,5 +1,5 @@
 ---
-title: 13 File-System Interface
+title: File-System Interface
 draft: true
 tags:
   - operating-system

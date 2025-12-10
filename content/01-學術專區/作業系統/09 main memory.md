@@ -1,5 +1,5 @@
 ---
-title: 09 Main Memory
+title: Main Memory
 draft: true
 tags:
   - operating-system

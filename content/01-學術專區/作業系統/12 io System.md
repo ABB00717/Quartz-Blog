@@ -1,5 +1,5 @@
 ---
-title: 12 I/O System
+title: I/O System
 draft: true
 tags:
   - operating-system

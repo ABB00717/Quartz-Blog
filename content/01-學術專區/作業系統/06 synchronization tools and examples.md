@@ -1,5 +1,5 @@
 ---
-title: 07 Semophore & Synchronization
+title: Semophore & Synchronization
 draft: true
 tags:
   - operating-system

@@ -1,5 +1,5 @@
 ---
-title: 08 死結（Deadlocks）
+title: 死結（Deadlocks）
 draft: false
 tags:
   - operating-systems
@@ -18,7 +18,7 @@ date: 2025-12-10
 
 ---
 
-# 1. 系統模型 (System Model)
+# 系統模型 (System Model)
 
 為了分析死結，我們將系統資源抽象化。系統包含有限數量的資源，分為多種資源類型（Resource Types）$R_1, R_2, ..., R_m$（如 CPU 週期、記憶體空間、I/O 裝置）。
 
@@ -42,7 +42,7 @@ date: 2025-12-10
 * 若每種資源類型只有一個實例，則必有死結 。
 * 若資源類型有多個實例，則**可能**有死結 。
 
-# 2. 死結特徵 (Deadlock Characterization)
+# 死結特徵 (Deadlock Characterization)
 
 死結的發生必須同時滿足以下四個條件 ：
 
@@ -51,7 +51,7 @@ date: 2025-12-10
 3.  **不可搶佔 (No Preemption)**：資源不能被搶佔；資源只能在行程完成任務後自願釋放 。
 4.  **循環等待 (Circular Wait)**：存在一組等待行程 $\{P_0, P_1, ..., P_n\}$，使得 $P_0$ 等待 $P_1$ 持有的資源，$P_1$ 等待 $P_2$ ...，$P_{n-1}$ 等待 $P_n$，且 $P_n$ 等待 $P_0$ 持有的資源 。
 
-# 3. 死結預防 (Deadlock Prevention)
+# 死結預防 (Deadlock Prevention)
 
 死結預防的策略是確保上述四個必要條件中至少有一個不成立 。
 
@@ -69,7 +69,7 @@ date: 2025-12-10
 
 詳細請閱讀：[[deadlock-prevention |死結預防]]
 
-# 4. 死結避免 (Deadlock Avoidance)
+# 死結避免 (Deadlock Avoidance)
 
 死結避免要求系統擁有額外的先驗資訊（A priori information），最簡單的模型是要求每個行程宣告其可能需要的各類資源的**最大需求量 (Maximum Claim)** 。
 
@@ -112,7 +112,7 @@ date: 2025-12-10
 
 詳細請閱讀：[[banker-algo | 銀行家演算法]]
 
-# 5. 死結檢測 (Deadlock Detection)
+# 死結檢測 (Deadlock Detection)
 
 若系統不使用預防或避免機制，則需提供檢測演算法與恢復機制 。
 
@@ -133,7 +133,7 @@ date: 2025-12-10
 
 詳細請閱讀：[[detection-algo | 死結檢測]]
 
-# 6. 死結恢復 (Recovery from Deadlock)
+# 死結恢復 (Recovery from Deadlock)
 
 一旦檢測到死結，系統可透過以下方式恢復：
 

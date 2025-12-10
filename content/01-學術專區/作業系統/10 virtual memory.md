@@ -1,5 +1,5 @@
 ---
-title: 10 Virtual Memory
+title: Virtual Memory
 draft: true
 tags:
   - operating-system
