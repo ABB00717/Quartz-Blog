@@ -1,11 +1,11 @@
 ---
 title: 14 Exception Handling and Event Handling
-draft: true
+draft: false
 tags:
   - programming-language
-date: 
+date:
 ---
-有例外處理（Exception Handling）才可以解決問題，連行程發生例外都無法偵測，那更談何解決問題？
+例外處理（Exception Handling）是解決程式問題的核心機制。若無法偵測行程中發生的異常，便無法著手解決問題。本文將探討例外處理的基本要件、面臨的困境、控制流設計，以及在不同程式語言（Ada、C++、Java）中的實作方式。
 
 # 大綱
 - 基本要件
@@ -16,68 +16,62 @@ date:
 	- C++
 	- Java 
 
-# 例外處理的基本要件
+# 基本要件
 
-- 例外偵測
-- 例外處理（Exception Handler）
+例外處理機制主要包含兩個部分：
 
-## 例外偵測
-例外就是指那些在原本意料之外的事，通常沒有做好就容易成為資安破口。使用者輸入沒有 EOF 該怎麼辦？
-
-## 例外處理
-現代語言都有 `raised` 關鍵字，但就算沒有還是可以做例外處理。像是回傳特殊值、修改特殊狀態。
+- **例外偵測 (Exception Detection)**
+  例外指的是程式執行過程中發生的非預期事件。若未妥善處理，容易演變成資安漏洞。例如：當程式預期讀取資料卻未遇到 EOF（End of File）時，該如何應對？
+- **例外處理 (Exception Handler)**
+  現代程式語言通常具備 `raise` 或 `throw` 關鍵字來觸發例外。即使在沒有內建機制的環境中，開發者仍可透過回傳特殊值或修改特定狀態旗標來實作例外處理。
 
 # 例外處理的困境
-通常這種例外處理程式寫起來很無聊，可能還佔了你程式碼的一半行數。
+通常這種例外處理程式寫起來很無聊，可能還佔了你程式碼的一半行數。而且在無限的使用者可能中，我該如何限制範圍，在範圍以外的例外又該如何應對？硬體錯誤算是例外嘛？對於沒有提供自己的例外處理機制的程式，是否應該有預設的例外處理器？
 
-而且在無限的使用者可能中，我該如何限制範圍，在範圍以外的例外又該如何應對？硬體錯誤算是例外嘛？對於沒有提供自己的例外處理機制的程式，是否應該有預設的例外處理器？
-
-還有好多好多的問題
+> 有趣的是，現在 LLM 的興起大幅降低程式碼撰寫成本，也讓更多程式設計師願意面對例外處理了。
 
 # 例外處理的控制流
-![[exception handler control flow.png | 例外處理的控制流]]
+![[exception handler control flow.png]]
 
-在 Ada 中例外處理是和該子程序同個區塊內，因此不須任何參數傳遞。Ada 是當時例外處理做的數一數二好的語言。
+在控制流設計上，不同語言有不同策略。以 Ada 為例，其例外處理與子程序位於同一區塊內，因此不需要進行參數傳遞。Ada 在當時被視為例外處理機制設計最為完善的語言之一。針對不同單元中未捕捉到的例外，系統也會有相應的處理流程。
 
-不同區塊單元對沒有對應例外的程序也會有不同應對狀況
+# 程式語言實做
 
-# 例外處理
+## Ada
 
-## 預定義例外
-- 範圍約束
-- 數值錯誤
-- 程式錯誤
-- 儲存空間錯誤
-- 任務處理錯誤
+Ada 提供了豐富的預定義例外，涵蓋以下類型：
 
-## `try-catch`
-C++ 引入這種機制。
+- 範圍約束 (Range constraints)
+- 數值錯誤 (Numeric errors)
+- 程式錯誤 (Program errors)
+- 儲存空間錯誤 (Storage errors)
+- 任務處理錯誤 (Tasking errors)
 
+## C++
+C++ 引入了 `try-catch` 機制。
+
+**基本語法：**
 ```cpp
-- Exception Handlers Form:
 try {
--- code that is expected to raise an exception
+    // 可能引發例外的程式碼
 } catch (formal parameter) {
--- handler code
+    // 處理程序
 }
 ...
 catch (formal parameter) {
--- handler code
+    // 處理程序
 }
 ```
 
 `parameter` 不一定要是參數，它可以只是特別的型別，甚至可以是省略號（ellipsis），只要能和其他 `catch` 區塊區分就沒問題。
-
-### 未處理的例外
-如果該例外沒有被 `catch`，就會傳播給引發該例外的函數呼叫者，直到傳播到主函式後若都還沒有被接住，那程序就會中止。
-
-### 延續執行
-會從第一個狀態繼續執行
+  
+若例外未被當前的 `catch` 區塊捕捉，它將向外傳播給呼叫該函數的父層。若傳播至主函式（Main）仍未被處理，程式將會終止。 捕捉並處理後，程式將從 `catch` 區塊之後繼續執行。
 
 ### 重新審視
 但很多例外無法被命名，也無法被硬體軟體偵測到。透過參數類型將例外綁定到處理程序，無疑會降低可讀性。
 
-## 例外類別（Java）
+## Java（例外類別）
+
 所有例外都是 `throwable` 的子類別
 
 `throwable` 只有兩個子類別：
@@ -86,38 +80,42 @@ catch (formal parameter) {
 
 和 C++ 非常相向，但 Java 每個 `catch` 都必須有一個 `throwable` 型別的參數。常會搭配 `new` 運算子來建立例外物件。
 
-### 例外與處理的綁定
+**語法特性：**
 
-### 延續執行
-在其他封閉的 `try` 結構中找，以此類推。找不到再傳播到調用者，若一直到主程序都沒處理就中止。
+  * 每個 `catch` 區塊必須接收一個 `Throwable` 型別的參數。
+  * 通常搭配 `new` 運算子來建立例外物件。
 
-所以為了確保所有例外都能被捕捉，可以在任何 `try` 結構中包含一個能捕捉所有例外的處理器。
+**例外傳播與捕捉：**
 
-### 受檢（Checked）和非受檢（Unchecked）例外
-除了錯誤以及 RunTimeException 是非受檢以外，其他例外都是受檢例外。
+  * 當例外發生時，系統會依序在封閉的 `try` 結構中尋找對應的處理器。若找不到，則向外層傳播，直到主程序。若最終未被處理，程式將終止。
+  * 為確保穩健性，開發者可在最外層的 `try` 結構中加入通用的例外處理器。
 
-### 其他設計
-抓到了例外以後，你可以選擇：
-- 處理它
-- 把它換個形式丟出
-- 不做任何事
+**受檢例外 (Checked) 與非受檢例外 (Unchecked)：**
 
-#### `finally`
-用於指定無論在 `try` 區塊中發生什麼情況都必須執行的程式碼
+  * **非受檢例外**：包含 `Error` 與 `RuntimeException`。
+  * **受檢例外**：除此之外的所有例外皆屬之，編譯器會強制要求處理。
 
-#### 斷言
-可以用 `assert` 檢查一個布林表達式語句，若評估為假則拋出 AssertionError 例外。
-- assert condition;
-- assert condition: expression;
+**處理策略：**
+捕捉到例外後，通常有三種選擇：
+
+1.  處理它。
+2.  轉換形式後重新拋出 (Rethrow)。
+3.  忽略（不建議）。
+
+**特殊結構：**
+
+  * **`finally`**：無論 `try` 區塊內是否發生例外，`finally` 區塊內的程式碼保證會被執行（常用於資源釋放）。
+  * **斷言 (`assert`)**：用於驗證布林表達式。若評估為 `false`，則拋出 `AssertionError`。
+      * `assert condition;`
+      * `assert condition: expression;`
 
 # 事件處理
 事件（Event）是由外部動作驅動的，像是點擊 GUI 介面。事件處理器（Event Handler）就是處理這些事件的程式碼。
 
-[Class EventHandler](https://docs.oracle.com/javase/8/docs/api/java/beans/EventHandler.html)
+> [!note] 參考資料：[Class EventHandler (Java Documentation)](https://docs.oracle.com/javase/8/docs/api/java/beans/EventHandler.html)
 
 # 總結
-
-- Ada 提供廣泛的例外處理機制，配備完整的內建例外集合。
-- C++ 並未內建預定義的例外。例外是透過將 throw 語句中的表達式類型與 catch 函式之參數類型進行綁定來建立處理關聯
-- Java 的例外機制與 C++ 類似，差別在於 Java 的例外必須是 Throwable 類別的子類。此外 Java 還包含 finally 子句
-- 事件是指需要由事件處理器進行處理之特定情況發生的通知
+  * **Ada**：提供廣泛且完整的內建例外集合。
+  * **C++**：未內建預定義例外，透過 `throw` 表達式型別與 `catch` 參數型別的綁定來建立處理關聯。
+  * **Java**：機制類似 C++，但強制例外必須繼承自 `Throwable`，並區分受檢/非受檢例外，且引入了 `finally` 區塊以確保資源清理。
+  * **事件**：指特定情況發生的通知，需由事件處理器進行回應。

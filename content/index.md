@@ -1,6 +1,5 @@
 ---
 title: ABB00717 Blog
-publish: true
 ---
 
 嗨！這裡是 ABB00717。
@@ -18,10 +17,16 @@ publish: true
 其實說到底，這裡根本就不該稱為部落格，更應該叫做我的筆記庫才對 ...
 
 # 正在挑戰的項目
-[Advent of Code](https://abb00717.com/03-%E7%AB%B6%E8%B3%BD%E7%A8%8B%E5%BC%8F/Advent-of-Code-2025/)
-[pwn.college](https://pwn.college/)
+- [Advent of Code](https://abb00717.com/03-%E7%AB%B6%E8%B3%BD%E7%A8%8B%E5%BC%8F/Advent-of-Code-2025/)
+- [pwn.college](https://pwn.college/)
+- 大學畢業
 
 # 已完成的挑戰
 - 高中畢業
-- Leetcode 500 題
-- 
+- [Leetcode 500 題](https://leetcode.com/u/abb00717/)
+- [osu! 爬進全球前五萬過](https://osu.ppy.sh/users/12093624)
+
+# 暫時停止的挑戰
+
+# 失敗的挑戰
+- 大學 GPA 4.3/4.3
