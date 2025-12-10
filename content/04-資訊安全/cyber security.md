@@ -1,6 +1,6 @@
 ---
 title: 資安資源酸辣湯
-draft: true
+draft: false
 tags:
   - cyber-security
 date: 2025-12-10
@@ -25,6 +25,9 @@ date: 2025-12-10
 
 至於我資安的最終目標，因為我有個同學在高中時就拿到 OSCP，也因此這順理成章的也成為我的目標。（可是真的好貴啊 @@）
 
+- Linux 基礎命令行工具
+- 組合語言基本語法與開發
+
 ---
 
 # 資源
@@ -39,7 +42,8 @@ date: 2025-12-10
 - [0xdf Hacks Stuff](https://0xdf.gitlab.io/)
   > 不得不介紹，它的許多 HTB 的 Writeup 都寫的極好，有興趣可以看看。 
 - [Orange Tsai](https://blog.orange.tw/)
-- [123ojp 的簡報](https://hackmd.io/@foxo-tw/slides/https%3A%2F%2Fslides.foxo.tw%2F)
+- [123ojp 的資安簡報](https://hackmd.io/@foxo-tw/slides/https%3A%2F%2Fslides.foxo.tw%2F)
+- [PT Note 滲透測試重新打底](https://pt-note.coderbridge.io/page/3/)
 
 ## 練習網站
 - [pwn.college](https://pwn.college/)
