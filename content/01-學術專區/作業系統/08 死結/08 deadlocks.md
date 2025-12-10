@@ -148,3 +148,8 @@ date: 2025-12-10
 * **飢餓 (Starvation)**：需確保同一行程不會總是成為受害者（可將回滾次數計入成本因素）。
 
 詳細請閱讀：[[deadlock-recovery | 死結恢復]]
+
+---
+
+# 參考資料
+1. Operating System Concepts, 10/e
