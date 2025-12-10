@@ -1,10 +1,10 @@
 ---
 title: Advent of Code Day 9
-draft: false
+draft: true
 tags:
   - advent-of-code
   - CP
-date: 2025-12-08
+date: 2025-12-09
 ---
 
 嘗試使用[[literate-programming]]的方法來解決這道競賽題

@@ -1,5 +1,5 @@
 ---
-title: 死結（Deadlocks）
+title: 00 死結（Deadlocks）
 draft: false
 tags:
   - operating-systems

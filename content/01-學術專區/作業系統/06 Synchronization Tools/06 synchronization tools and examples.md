@@ -1,5 +1,5 @@
 ---
-title: Semophore & Synchronization
+title: 00 Semophore & Synchronization
 draft: true
 tags:
   - operating-system
