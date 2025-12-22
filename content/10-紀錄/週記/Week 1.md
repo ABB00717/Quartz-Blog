@@ -1,6 +1,5 @@
 ---
 title: Week 1
-draft: true
 tags:
   - 週記
 date: 2025-12-21
