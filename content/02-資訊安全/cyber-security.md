@@ -48,6 +48,8 @@ date: 2025-12-10
 ## 練習網站
 - [pwn.college](https://pwn.college/)
 - [PortSwigger](https://portswigger.net/web-security/all-labs)
+- [Hack The Box Academy](https://academy.hackthebox.com/dashboard)
+- [Hack The Box Lab](https://app.hackthebox.com/home)
 
 ## 書本
 - [揭秘家用路由器 0day 漏洞挖掘技術](https://www.tenlong.com.tw/products/9789863478805)
