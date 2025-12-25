@@ -20,6 +20,10 @@ jobs:
   build:
     runs-on: ubuntu-22.04
     steps:
+      - name: Install Chinese Fonts
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y fonts-noto-cjk
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0 # Fetch all history for git info
@@ -28,8 +32,8 @@ jobs:
           node-version: 22
       - name: Install Dependencies
         run: npm ci
-#      - name: Fetch Quartz Theme
-#        run: curl -s -S https://raw.githubusercontent.com/saberzero1/quartz-themes/master/action.sh | bash -s -- $THEME_NAME
+      - name: Fetch Quartz Theme
+        run: curl -s -S https://raw.githubusercontent.com/saberzero1/quartz-themes/master/action.sh | bash -s -- $THEME_NAME
       - name: Build Quartz
         run: npx quartz build
       - name: Upload artifact

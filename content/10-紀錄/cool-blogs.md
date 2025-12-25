@@ -32,8 +32,15 @@ date: 2025-12-07
 #### [Orange Tsai](https://blog.orange.tw/)
 - [你用它上網，我用它進你內網! 中華電信數據機遠端代碼執行漏洞](https://blog.orange.tw/posts/2019-11-HiNet-GPON-Modem-RCE/)
 
+#### [Red]()
+- [Windows 核心利用](https://xn--tj3a.tw/Windows-核心利用/)
+
 #### [Paul Graham](https://www.paulgraham.com/)
 - [WRITE AND WRITE-NOTS](https://www.paulgraham.com/writes.html)
+
+#### [Wiwi](https://wiwi.blog/)
+- [Blog 讓廢文現形](https://wiwi.blog/blog/social-vs-blog-content)
+- [為什麼我不用社群媒體了？](https://wiwi.blog/blog/why-i-dont-use-social-media)
 
 ---
 
@@ -41,7 +48,6 @@ date: 2025-12-07
 | :------------------------------------------------------------ | :-------- |
 | [人生的最大遺憾，就是沒有盡力。](https://lckung.wordpress.com/about/)        | 台大資管孔令傑老師 |
 | [Jserv's blog](https://blog.linux.org.tw/~jserv/)             | 成大資工黃敬群老師 |
-| [貓.tw](https://xn--tj3a.tw/)                                  | 我同學       |
 | [Owen Wu](https://wusandwitch.zudo.cc/posts)                  | 我同學       |
 | [Vic Wen](https://blog.vicwen.app/)                           | 我同學       |
 | [Vaxry's blog](https://blog.vaxry.net/)                       |           |
@@ -51,6 +57,4 @@ date: 2025-12-07
 | [Richard Stallman's Personal Page](https://www.stallman.org/) |           |
 | [danluu](https://danluu.com/)                                 |           |
 | [Ivon Huang](https://ivonblog.com/)                           |           |
-| [Wiwi.Blog](https://wiwi.blog/)                               |           |
 | [ro](https://seated.ro/)                               |           |
-
