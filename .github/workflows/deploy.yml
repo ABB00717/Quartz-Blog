@@ -4,8 +4,8 @@ on:
   push:
     branches:
       - v4
-# env:
-#   THEME_NAME: garden-gnome-adwaita-gtk
+env:
+  THEME_NAME: garden-gnome-adwaita-gtk
 
 permissions:
   contents: read
